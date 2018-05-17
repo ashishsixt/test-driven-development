@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+
 const CommentList = (props) => {
     const list = props.comments.map((comment, index) => {
         return (

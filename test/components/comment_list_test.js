@@ -1,20 +1,20 @@
 import {renderComponent, expect} from "../test_helper";
 import CommentList from "../../src/components/comment_list";
-const comments = {comments: ["Hello World", "Hello India"]};
+const list = {comments: ["Hello World", "Hello India"]};
 describe("comment list", () => {
     let component;
 
     beforeEach(()=>{
-        component = renderComponent(CommentList, null, comments);
+        component = renderComponent(CommentList, null, list);
     });
 
     it("shows an LI each comment", () => {
-        expect(component.find(li).length).to.equal(2);
+        expect(component.find("li").length).to.equal(2);
     });
 
     it("shows each comment that is provided", () => {
-        expect(component).to.contain(comments.comments[0]);
-        expect(component).to.contain(comments.comments[1]);
+        expect(component).to.contain(list.comments[0]);
+        expect(component).to.contain(list.comments[1]);
     });
     
 });
