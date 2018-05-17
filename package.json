@@ -4,7 +4,7 @@
 	"author": "Ashish Kumar Sinha",
 	"scripts": {
 		"start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development",
-		"less": "lessc ./src/less/main.less ./style/style.css",
+		"less": "lessc ./src/style/main.less ./style/style.css",
 		"webpack": "webpack --mode=production",
 		"test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
 		"test:watch": "npm run test -- --watch"

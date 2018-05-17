@@ -9,12 +9,13 @@ import {Provider} from "react-redux";
 import {createStore} from "redux";
 import reducers from "../src/reducers";
 
-const $ = _(window);
+
 let dom = new jsdom("<!doctype html><html><body></body></html>");
 
 global.document = dom.window.document;
 global.window = dom.window;
 global.navigator = global.window.navigator;
+const $ = _(window);
 chaiJquery(chai, chai.util, $);
 
 function renderComponent(ComponentClass, props = {}, state = {}) {
