@@ -5,7 +5,7 @@ describe("comment list", () => {
     let component;
 
     beforeEach(()=>{
-        component = renderComponent(CommentList, comments);
+        component = renderComponent(CommentList, null, comments);
     });
 
     it("shows an LI each comment", () => {

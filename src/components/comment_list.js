@@ -1,7 +1,7 @@
 import React from "react";
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 const CommentList = (props) => {
-    const list = props.comments.map((comment, index)=>{
+    const list = props.comments.map((comment, index) => {
         return (
             <li key={index}>{comment}</li>
         );
@@ -12,7 +12,7 @@ const CommentList = (props) => {
 }
 
 function mapStateToProps(state) {
-    return  {comments: state.comments};
+    return { comments: state.comments };
 }
 
-export default connect()(CommentList);
+export default connect(mapStateToProps)(CommentList);
