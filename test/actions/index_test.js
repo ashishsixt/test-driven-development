@@ -2,7 +2,7 @@ import { expect } from "../test_helper";
 import {types as TYPES} from "../../src/actions/types";
 import {saveComment} from "../../src/actions";
 const new_comment = "Hello Bangalore";
-describe("actions", () => {
+describe("Actions", () => {
     describe("save comment", () => {
         it("has the correct type", ()=>{
             const action = saveComment();
