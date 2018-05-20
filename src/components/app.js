@@ -7,7 +7,7 @@ export default class App extends Component {
 			<div>
 				<h1>Introduction to test driven Development</h1>
 				<Comment/>
-				<CommentList />
+				
 			</div>
 		);
 	}
