@@ -5,6 +5,13 @@ pipeline {
             args '-p 3000:3000'
         }
     }
+    /* parameteres {
+        string(name: "dev", defaultValue: 'IP', description: 'Some Info')
+        string(name: "prod", defaultValue: 'IP', description: 'Some Info')
+    } */
+    triggers {
+        pollSCM('* * * * *')
+    }
     environment {
         CI = 'true' 
     }
@@ -24,5 +31,26 @@ pipeline {
                 sh 'npm run test' 
             }
         }
+        stage('Deploy to staging') {
+            steps {
+                build job: 'Deploy-to-Staging'
+            }
+        }
+        /* stage('Deploy to Production') {
+            steps {
+                timeout(time: 5, unit: 'DAYS') {
+                    input message: 'Approve production deploy?', submitter: xxxx
+                }
+                build job: 'Deploy-to-Production'
+            }
+            post {
+                success {
+                    echo 'successfully deployed to production'
+                }
+                failure {
+                    echo 'Deployment failed in production'
+                }
+            }
+        } */
     }
 }
