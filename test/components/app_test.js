@@ -12,7 +12,7 @@ describe('App' , () => {
 	});
 
 	it('checking header test', () => {
-		expect(component).to.contain("Introduction to test driven Development");
+		expect(component).to.contain("Introduction1 to test driven Development");
 	});
 
 	it("shows a comment box", () =>{
