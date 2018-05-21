@@ -13,7 +13,7 @@ pipeline {
         pollSCM('* * * * *')
     }
     environment {
-        CI = 'true' 
+        CI = 'true'
     }
     stages {
         stage('NPM Install') {
@@ -26,7 +26,7 @@ pipeline {
                 sh 'npm run webpack'
             }
         }
-        stage('Test') { 
+        stage('Test') {
             steps {
                 sh 'npm run test' 
             }
