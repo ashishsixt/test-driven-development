@@ -31,12 +31,12 @@ pipeline {
                 sh 'npm run test' 
             }
         }
-        stage('Deploy to staging') {
+        /*stage('Deploy to staging') {
             steps {
                 build job: 'Deploy-to-Staging'
             }
         }
-        /* stage('Deploy to Production') {
+        stage('Deploy to Production') {
             steps {
                 timeout(time: 5, unit: 'DAYS') {
                     input message: 'Approve production deploy?', submitter: xxxx
